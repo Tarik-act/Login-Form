@@ -40,7 +40,7 @@ function Login() {
       <Layout>
         <Content style={{ backgroundColor: '#fff' }}>
           <Row>
-            <Col flex='600px'>
+            <Col flex='40%'>
               <div className='left'>
                 <h1
                   style={{ fontSize: '1.75rem', fontWeight: '700', margin: 0 }}
