@@ -1,13 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import 'antd/dist/antd.css';
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
+  transition: all 0.2s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-para {
+  font-weight: bold;
+}
+.nav-para span {
+  font-size: 1rem;
+  color: red;
+}
+
+.left {
+  width: 300px;
+  margin: 12rem auto !important;
+  text-align: center;
+}
+
+.left p {
+  margin-bottom: 2rem;
+  color: #9eaaad;
+  font-size: 0.8rem;
+}
+
+.left Form {
+  text-align: start;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.image-none {
+  background-color: steelblue;
+  height: 100vh;
+}
+
+@media (max-width: 560px) {
+  .btn-container {
+    display: none;
+  }
+  .image-none {
+    display: none;
+  }
 }
