@@ -55,7 +55,6 @@ function Login() {
                   initialValues={{
                     remember: false,
                   }}
-                  // onSubmit={handleSubmit}
                 >
                   <Form.Item
                     name='email'
@@ -108,8 +107,7 @@ function Login() {
                         width: '100%',
                       }}
                       htmlType='submit'
-                      onSubmit={handleSubmit}
-                      // onClick={handleSubmit}
+                      onClick={handleSubmit}
                     >
                       Login
                     </Button>
