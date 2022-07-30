@@ -23,9 +23,11 @@ function Login() {
         }),
       });
       const result = await response.json();
+      alert(result.token);
       console.log(result);
-    } catch (error) {
-      console.log(error.response);
+    } catch (err) {
+      alert(err.error);
+      console.log(err);
     }
   };
 
@@ -53,6 +55,7 @@ function Login() {
                   initialValues={{
                     remember: false,
                   }}
+                  // onSubmit={handleSubmit}
                 >
                   <Form.Item
                     name='email'
@@ -105,17 +108,24 @@ function Login() {
                         width: '100%',
                       }}
                       htmlType='submit'
-                      onClick={handleSubmit}
+                      onSubmit={handleSubmit}
+                      // onClick={handleSubmit}
                     >
                       Login
                     </Button>
                   </Form.Item>
 
-                  <Form.Item name='remember' valuePropName='checked'>
-                    <div className='flex'>
-                      <Checkbox className='checkbox'>Remember me</Checkbox>
-                      <p>Forget Password?</p>
-                    </div>
+                  <Form.Item>
+                    <Form.Item name='remember' valuePropName='checked' noStyle>
+                      <Checkbox>Remember me</Checkbox>
+                    </Form.Item>
+
+                    <a
+                      className='login-form-forgot'
+                      href='https://www.google.com'
+                    >
+                      Forgot password
+                    </a>
                   </Form.Item>
                 </Form>
               </div>

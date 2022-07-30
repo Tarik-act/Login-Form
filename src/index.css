@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
-@import 'antd/dist/antd.css';
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -29,9 +29,10 @@ body {
 }
 
 .left {
-  width: 300px;
+  width: 500px;
   margin: 12rem auto !important;
   text-align: center;
+  padding: 0 2rem;
 }
 
 .left p {
@@ -51,11 +52,40 @@ body {
   height: 100vh;
 }
 
+.login-form-forgot {
+  float: right;
+}
+
+@media (max-width: 850px) {
+  .image-none {
+    width: auto;
+  }
+
+  .left {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
 @media (max-width: 560px) {
   .btn-container {
     display: none;
   }
   .image-none {
     display: none;
+  }
+
+  .left {
+    margin: 0 auto;
+    width: 100vw;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-form-forgot {
+    float: none;
+    display: block;
+    text-align: center;
   }
 }
